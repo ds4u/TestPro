@@ -1,0 +1,132 @@
+<html>
+	<head>
+		<style type="text/css">
+			table  {
+				margin-top:10%;
+				
+		 	}
+		 	td {
+		 		font-size:12px;
+		 	}
+		 	
+		 	th {
+		 		font-size:10px;
+		 	}
+		 	
+		 	
+		</style>
+	</head>
+
+	<body>
+	
+		#set ($finalObject = $object.get(0))
+	
+		<table cellpadding="1" cellspacing="2" style="width:100%; ">
+			<tr><td style="width:100%; text-align: center;"><h1>Encounter Report</h1></td></tr>
+		</table>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<table cellpadding="1" cellspacing="2" style="width:100%; ">
+		
+			<tr class="table" style="background-color: #6F6969; font-color:#fff;">
+			<td class="table" style="width:15%; text-align: center;">Physician Name</td>
+			<td class="table" style="width:15%; text-align: center;">Patient Name</td>
+			<td class="table" style="width:15%; text-align: center;">Date & Time</td>
+			<td class="table" style="width:15%; text-align: center;">Duration</td> 
+			</tr>
+		
+		</table>
+		<br/>
+		<br/>
+		<table cellpadding="1" cellspacing="2" style="width:100%; ">
+		
+			<tr class="table" style="background-color: #EEE9E5; font-color:#fff;">
+			<td class="table" style="width:15%; text-align: center;">$!finalObject.physicianname</td>
+			
+			<td class="table" style="width:15%; text-align: center;">$!finalObject.patientname</td>
+			
+			<td class="table" style="width:15%; text-align: center;">$!finalObject.datetime</td>
+			
+			<td class="table" style="width:15%; text-align: center;">$!finalObject.duration</td> 
+			
+			</tr>
+		
+		</table>
+		<br/>
+		<br/>
+		<table cellpadding="1" cellspacing="2" style="width:100%; ">
+			<tr class="table" style="background-color: #6F6969; font-color:#fff;">
+			<td class="table" style="width:15%; text-align: left;">Presenting Problem</td>
+			</tr>
+		</table>
+		<br/>
+		<br/>
+		<table cellpadding="1" cellspacing="2" style="width:100%; ">
+			<tr class="table" style="background-color: #EEE9E5; font-color:#fff;">
+			<td class="table" style="width:15%; text-align: left;">
+			$!finalObject.presentingproblem
+			</td>
+			</tr>	
+		</table>
+		<br/>
+		<br/>
+		<table cellpadding="1" cellspacing="2" style="width:100%;">
+			<tr class="table" style="background-color: #6F6969; font-color:#fff;">
+			<td class="table" style="width:15%; text-align: left;">Instructions</td>
+			</tr>
+		</table>
+		<br/>
+		<br/>
+		<table cellpadding="1" cellspacing="2" style="width:100%; ">
+			<tr class="table" style="background-color: #EEE9E5; font-color:#fff;">
+			<td class="table" style="width:15%; text-align: left;">
+			$!finalObject.instructions
+			</td>
+			</tr>	
+		</table>
+		<br/>
+		<br/>
+		<table cellpadding="1" cellspacing="2" style="width:100%; ">
+			<tr class="table" style="background-color: #6F6969; font-color:#fff;">
+			<td class="table" style="width:15%; text-align: left;">Recomedations</td>
+			</tr>
+		</table>
+		<br/>
+		<br/>
+		<table cellpadding="1" cellspacing="2" style="width:100%; ">
+			<tr class="table" style="background-color: #EEE9E5; font-color:#fff;">
+			<td class="table" style="width:15%; text-align: left;">
+			$!finalObject.recomedations
+			</td>
+			</tr>	
+		</table>
+		
+			<br/>
+		<br/>
+		<table cellpadding="1" cellspacing="2" style="width:100%;">
+		
+			<tr class="table" style="background-color: #6F6969; font-color:#fff;">
+			<td class="table" style="width:15%; text-align: center;">Medication Name</td>
+			<td class="table" style="width:15%; text-align: center;">Strength</td>
+			<td class="table" style="width:15%; text-align: center;">frequency</td>
+			<td class="table" style="width:15%; text-align: center;">Start Date</td> 
+			<td class="table" style="width:15%; text-align: center;">End Date</td>
+			</tr>
+		
+		#foreach($obj in $object)
+			<tr class="table" style="background-color: #EEE9E5; font-color:#fff;">
+				<td class="table" style="width:15%; text-align: center;">$!obj.medicationname</td>
+				<td class="table" style="width:15%; text-align: center;">$!obj.strength</td>
+				<td class="table" style="width:15%; text-align: center;">$!obj.frequency</td>
+				<td class="table" style="width:15%; text-align: center;">$!obj.startdate</td>
+				<td class="table" style="width:15%; text-align: center;">$!obj.enddate</td> 
+			</tr>
+		#end
+		</table>
+		
+	</body>
+
+</html>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+
+
+	<persistence-unit name="queehr" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<class>com.dreamsoft4u.queehr.database.entities.Address</class>
+		<class>com.dreamsoft4u.queehr.database.entities.Addresstype</class>
+		<class>com.dreamsoft4u.queehr.database.entities.Allergy</class>
+		<class>com.dreamsoft4u.queehr.database.entities.Appointment</class>
+		<class>com.dreamsoft4u.queehr.database.entities.Appointmenttype</class>
+		<class>com.dreamsoft4u.queehr.database.entities.Availability</class>
+		<class>com.dreamsoft4u.queehr.database.entities.Billing</class>
+		<class>com.dreamsoft4u.queehr.database.entities.Chronicillness</class>
+		<class>com.dreamsoft4u.queehr.database.entities.City</class>
+		<class>com.dreamsoft4u.queehr.database.entities.Country</class>
+		<class>com.dreamsoft4u.queehr.database.entities.Department</class>
+		<class>com.dreamsoft4u.queehr.database.entities.Document</class>
+		<class>com.dreamsoft4u.queehr.database.entities.EmployeeDetail</class>
+		<class>com.dreamsoft4u.queehr.database.entities.Encounterreport</class>
+		<class>com.dreamsoft4u.queehr.database.entities.Faq</class>
+		<class>com.dreamsoft4u.queehr.database.entities.Image</class>
+		<class>com.dreamsoft4u.queehr.database.entities.InsuranceDetail</class>
+		<class>com.dreamsoft4u.queehr.database.entities.Intakenote</class>
+		<class>com.dreamsoft4u.queehr.database.entities.Medication</class>
+		<class>com.dreamsoft4u.queehr.database.entities.ProfileChangeRequest</class>
+		<class>com.dreamsoft4u.queehr.database.entities.Referralpatient</class>
+		<class>com.dreamsoft4u.queehr.database.entities.State</class>
+		<class>com.dreamsoft4u.queehr.database.entities.Usertype</class>
+		<class>com.dreamsoft4u.queehr.database.entities.User</class>
+		<class>com.dreamsoft4u.queehr.database.entities.Vital</class>
+		<class>com.dreamsoft4u.queehr.database.entities.Logtable</class>
+		<class>com.dreamsoft4u.queehr.database.entities.Notification</class>
+		<class>com.dreamsoft4u.queehr.database.entities.Nursemapping</class>
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
+			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
+			<property name="hibernate.connection.url" value="jdbc:mysql://10.0.1.242/queehr" 
+				/> <property name="hibernate.connection.username" value="qa" /> <property 
+				name="hibernate.connection.password" value="pass@123" />
+			<!-- <property name="hibernate.connection.url" value="jdbc:mysql://10.0.1.50/queehr" />
+			<property name="hibernate.connection.username" value="root" />
+			<property name="hibernate.connection.password" value="mysql" /> -->
+			<property name="hibernate.c3p0.max_size" value="30" />
+			<property name="hibernate.c3p0.min_size" value="2" />
+			<property name="hibernate.c3p0.idle_test_period" value="10" />
+			<property name="hibernate.c3p0.max_statements" value="5" />
+			<property name="hibernate.c3p0.timeout" value="100" />
+			<property name="hibernate.show_sql" value="false" />
+			<property name="current_session_context_class" value="thread" />
+
+			<property name="hibernate.connection.provider_class"
+				value="org.hibernate.connection.C3P0ConnectionProvider" />
+
+
+		</properties>
+
+
+
+
+
+
+
+	</persistence-unit>
+
+</persistence>
